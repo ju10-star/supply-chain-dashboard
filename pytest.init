@@ -1,0 +1,9 @@
+[pytest]
+filterwarnings =
+    ignore:.*FigureCanvasAgg is non-interactive.*:UserWarning
+addopts = -q
+testpaths = tests
+pythonpath = src
+# Evitar que matplotlib abra ventanas gráficas en tests
+env =
+    MPLBACKEND=Agg
